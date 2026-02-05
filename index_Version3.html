@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Will you be my Valentine? 💖</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container" aria-labelledby="pageTitle">
+    <header class="hero">
+      <h1 id="pageTitle" class="title">Will you be my Valentine?</h1>
+      <p class="subtitle">Cute cat memes + chaotic "No" button = guaranteed giggles 🐱💌</p>
+    </header>
+
+    <section class="card" aria-label="Valentine card">
+      <div class="meme-panel" aria-hidden="false">
+        <img id="meme" src="https://placekitten.com/720/420" alt="Cute cat meme">
+        <div class="meme-caption">When you accidentally text them a heart instead of "ok" 💘</div>
+      </div>
+
+      <div class="choices" aria-hidden="false">
+        <button id="yesBtn" class="btn yes" aria-label="Yes — be my valentine">Yes! 😻</button>
+        <button id="noBtn" class="btn no" aria-label="No — deny the valentine">No... 😿</button>
+      </div>
+
+      <p class="hint">Pro tip: hover or tap "No" and see what the shy floof does. If they press "Yes", it's celebration time. 🎉</p>
+    </section>
+
+    <section class="socials card small" aria-label="About">
+      <p style="text-align:center">Made with memes, a little TikTok energy, and an Instagram-style heart. Replace images with your own cat pics if you like!</p>
+      <div class="thumbs" style="margin-top:8px">
+        <img src="https://placekitten.com/200/200" alt="kitten 1" loading="lazy">
+        <img src="https://placekitten.com/201/200" alt="kitten 2" loading="lazy">
+        <img src="https://cataas.com/cat/says/luv%20u?size=50" alt="cat says luv u" loading="lazy">
+      </div>
+    </section>
+
+    <footer class="footer">Sent with extra cat hair and affection ❤️</footer>
+  </main>
+
+  <!-- celebration container -->
+  <div id="celebration" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

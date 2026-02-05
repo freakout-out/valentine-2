@@ -1,0 +1,189 @@
+:root{
+  --pink-1: #ffd6e8;
+  --pink-2: #ffb6d5;
+  --accent: #ff5c9e;
+  --muted: #6b4a6b;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(135deg, var(--pink-1), var(--pink-2));
+  color: var(--muted);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* container */
+.container{
+  width:100%;
+  max-width:920px;
+  margin:0 auto;
+}
+
+/* hero */
+.hero{
+  text-align:center;
+  margin-bottom:18px;
+}
+.title{
+  font-family: "Lobster", "Poppins", cursive;
+  font-size:46px;
+  margin:0;
+  color:#b1006b;
+  text-shadow: 0 3px 0 rgba(255,255,255,0.35);
+}
+.subtitle{
+  margin:6px 0 0;
+  opacity:0.9;
+}
+
+/* card */
+.card{
+  background: rgba(255,255,255,0.85);
+  border-radius:18px;
+  padding:16px;
+  box-shadow: 0 8px 30px rgba(182, 56, 129, 0.14);
+  margin-bottom:14px;
+}
+
+/* meme panel */
+.meme-panel{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+}
+.meme-panel img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:12px;
+}
+.meme-caption{
+  position:absolute;
+  left:10px;
+  right:10px;
+  bottom:8px;
+  padding:6px 10px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.25), rgba(0,0,0,0.15));
+  color:white;
+  border-radius:10px;
+  font-weight:600;
+  text-align:center;
+  backdrop-filter: blur(4px);
+  font-size:14px;
+}
+
+/* choices */
+.choices{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
+  margin-top:14px;
+  position:relative;
+  min-height:60px;
+}
+.btn{
+  border:0;
+  padding:12px 22px;
+  border-radius:12px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform .12s ease, box-shadow .12s ease, left .18s ease, top .18s ease;
+  user-select:none;
+  touch-action:manipulation;
+}
+.btn:active{transform:scale(.98)}
+.yes{
+  background: linear-gradient(180deg,#ff8fc0,#ff5c9e);
+  color:white;
+}
+.no{
+  background: #fff;
+  color: #c23a7a;
+  border:2px dashed rgba(194,58,122,0.12);
+}
+
+/* hint */
+.hint{
+  margin:8px 0 0;
+  font-size:13px;
+  text-align:center;
+  opacity:0.95;
+}
+
+/* small thumbs */
+.small .thumbs{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  margin-top:8px;
+}
+.small img{
+  width:72px;
+  height:72px;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* footer */
+.footer{
+  text-align:center;
+  font-size:13px;
+  margin-top:6px;
+  opacity:0.85;
+}
+
+/* celebration (hearts/confetti) */
+#celebration{
+  position:fixed;
+  pointer-events:none;
+  inset:0;
+  overflow:visible;
+  z-index:9999;
+}
+
+/* adorable floating hearts animation */
+.heart {
+  position:fixed;
+  width:28px;
+  height:28px;
+  transform: translate(-50%, -50%) scale(1);
+  opacity:0.95;
+  background: radial-gradient(circle at 30% 30%, #fff8, #fff0), linear-gradient(135deg,#ff7bb8 0%, #ff3a83 100%);
+  clip-path: polygon(50% 0%, 61% 14%, 75% 14%, 92% 34%, 85% 58%, 50% 100%, 15% 58%, 8% 34%, 25% 14%, 39% 14%);
+  animation: floatUp 1600ms ease-out forwards;
+}
+@keyframes floatUp{
+  0%{transform: translateY(0) scale(0.9); opacity:1}
+  100%{transform: translateY(-240px) scale(1.25); opacity:0}
+}
+
+/* floating cheeky note */
+.floating-note {
+  position:fixed;
+  background: rgba(255,255,255,0.97);
+  color: #b1006b;
+  padding:8px 10px;
+  border-radius:10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  font-weight:700;
+  transform: translate(-50%, -50%);
+  pointer-events:none;
+  z-index:9999;
+}
+
+/* small responsive */
+@media (max-width:560px){
+  .title{font-size:34px}
+  .choices{gap:8px}
+  .btn{padding:10px 16px}
+}
